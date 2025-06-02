@@ -12,7 +12,11 @@ async function HomePage() {
     <>
       <ProductList
         title='Newest Arrivals'
-        data={latestProducts}
+        data={latestProducts.map((product) => ({
+          ...product,
+          price: product.price.toString(),
+          rating: product.rating.toString(),
+        }))}
         limit={Number(4)}
       />
     </>
