@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ProductPrice from './product-price'
 import { Product } from '@/types'
+import { formatNumberWithDecimal } from '@/lib/utils'
 
 const ProductCard = ({ product }: { product: Product }) => {
   return (

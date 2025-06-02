@@ -10,7 +10,11 @@ async function HomePage() {
   const latestProducts = await getLatestProducts()
   return (
     <>
-      <ProductList data={latestProducts} title='Newest Arrivals' limit={4} />
+      <ProductList
+        title='Newest Arrivals'
+        data={latestProducts}
+        limit={Number(4)}
+      />
     </>
   )
 }

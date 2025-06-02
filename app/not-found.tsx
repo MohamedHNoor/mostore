@@ -3,8 +3,7 @@
 import Image from 'next/image'
 import logo from '@/public/images/logo.svg'
 import { APP_NAME } from '@/lib/constants'
-import Link from 'next/link'
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 
 function NotFound() {
   return (

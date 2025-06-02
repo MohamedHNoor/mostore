@@ -3,6 +3,7 @@ import { insertProduct } from '@/lib/validators'
 
 export type Product = z.infer<typeof insertProduct> & {
   id: string
-  rating: number
+  rating: string
+  numReviews: number
   createdAt: Date
 }
