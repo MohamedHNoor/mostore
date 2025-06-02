@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { getProductBySlug } from '@/lib/actions/product.action'
 import NotFound from '@/app/not-found'
+import ProductImages from '@/components/shared/product/product-images'
 
 async function ProductDetailPage(props: { params: Promise<{ slug: string }> }) {
   const { slug } = await props.params
@@ -16,7 +17,9 @@ async function ProductDetailPage(props: { params: Promise<{ slug: string }> }) {
     <section>
       <div className='grid grid-cols-1 md:grid-cols-5'>
         {/* Image Column */}
-        <div className='col-span-2'>{/* Add Image Component */}</div>
+        <div className='col-span-2'>
+          <ProductImages images={product.images} />
+        </div>
 
         {/* Details Column */}
         <div className='col-span-2 p-5'>
